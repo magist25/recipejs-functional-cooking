@@ -169,3 +169,81 @@ button:active {
 .steps-container.visible {
     display: block;
 }
+/* Search Container */
+.search-container {
+  max-width: 500px;
+  margin: 1.5rem auto 0;
+  position: relative;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 0.75rem; /* padding-right for clear button */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#search-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #667eea;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Recipe Counter */
+.recipe-info {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Favorite Button on Cards */
+.recipe-card {
+  position: relative; /* Required for absolute favorite button */
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  .search-container { margin: 1rem auto 0; }
+  .recipe-card { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .button-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .filter-btn, .sort-btn { width: 100%; }
+}
+.ingredients-container,
+.steps-container {
+  display: none;
+}
+
+.ingredients-container.visible,
+.steps-container.visible {
+  display: block;
+}
+
