@@ -154,3 +154,18 @@ button:hover {
 button:active {
   transform: scale(0.95);
 }
+.ingredients-container {
+    display: none;
+}
+
+.ingredients-container.visible {
+    display: block;
+}
+
+.steps-container {
+    display: none;
+}
+
+.steps-container.visible {
+    display: block;
+}
